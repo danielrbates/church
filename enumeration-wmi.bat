@@ -40,8 +40,8 @@ REM File and directory integrity information
 echo. > "%filename% file-directory integrity.txt"
 REM notepad.exe
 echo notepad.exe: >> "%filename% file-directory integrity.txt"
-wmic /append:"%filename% file-directory integrity.txt" datafile where name='c:\\windows\\system32\\notepad.exe' get version,creation date,install date, last modified > nul
+wmic /append:"%filename% file-directory integrity.txt" datafile where name='c:\\windows\\system32\\notepad.exe' get version,creationdate,installdate,lastmodified > nul
 echo Hosts file: >> "%filename% file-directory integrity.txt"
-wmic /append:"%filename% file-directory integrity.txt" datafile where name='c:\\windows\\system32\\drivers\\etc\\hosts' get version,creation date,install date, last modified > nul
+wmic /append:"%filename% file-directory integrity.txt" datafile where name='c:\\windows\\system32\\drivers\\etc\\hosts' get version,creationdate,installdate,lastmodified > nul
 echo Files in appdata: >> "%filename% file-directory integrity.txt"
 wmic /append:"%filename% file-directory integrity.txt" datafile where "drive='c:' and path='\\Users\\NCCPC26\\Appdata\\Local\\'" get name
