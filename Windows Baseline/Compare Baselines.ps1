@@ -2,11 +2,11 @@
 $path = "$PSScriptRoot\Output"
 
 # Find any baseline files in the output directory (the filename will match the
-# pattern 'baseline-yyyyMMdd-hhmmss
+# pattern 'baseline-yyyyMMdd-hhmmss'.
 $FileNames = dir $Path | where {$_.Name -match "baseline-(\d){8}-(\d){6}\.txt"}
 
-# Import the baseline files using -Raw to enable multi-line regex matching.
-# Use the first filename (alphanumerically sorted) for the initial baseline.
+# Import the baseline files using -Raw to enable multi-line regex matching. Use
+# the first filename (alphanumerically sorted) for the initial baseline.
 $InitialBaseline = $FileNames[0].Name
 $InitialBaselineContent = Get-Content -Path $path\$InitialBaseline -Raw
 # Use the last filename (alphanumerically sorted) for the final baseline.
