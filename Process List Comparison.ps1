@@ -14,7 +14,6 @@ $pslist | foreach {
 }
 
 $internal = (Get-Process | select ID,ProcessName | Sort-Object -Property ID)
-notepad
 $external = (Get-pslist-processes | select ID,ProcessName | Sort-Object -Property ID)
 $internal | Out-File -FilePath "$path\internal.txt"
 $external | Out-File -FilePath "$path\external.txt"
