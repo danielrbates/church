@@ -1,1 +1,1 @@
-# Windows system enumeration with PowerShell (and rudimentary Batch).
+# Blue team tools and scripts.
